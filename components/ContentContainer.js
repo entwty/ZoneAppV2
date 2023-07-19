@@ -1,8 +1,8 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { Image, StyleSheet, View, Text } from "react-native";
 import { Border, Color, FontSize, FontFamily } from "../GlobalStyles";
 
-const ContentContainer = () => {
+const ContentContainer = memo(() => {
   return (
     <View style={styles.content}>
       <View style={styles.bgColorPosition}>
@@ -32,7 +32,7 @@ const ContentContainer = () => {
       </View>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   photoIconLayout: {

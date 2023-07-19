@@ -1,8 +1,8 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { View, Text, StyleSheet, Pressable, Image } from "react-native";
 import { FontSize, FontFamily, Color, Border } from "../GlobalStyles";
 
-const ViewButtons = () => {
+const ViewButtons = memo(() => {
   return (
     <View style={styles.tmElemeler35Parent}>
       <Text style={styles.tmElemeler35}>Tüm Eşleşmeler (35)</Text>
@@ -24,7 +24,7 @@ const ViewButtons = () => {
       </Pressable>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   btnBackPosition: {

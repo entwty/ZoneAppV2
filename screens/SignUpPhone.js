@@ -1,13 +1,13 @@
 import * as React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
 import {
+  View,
   Image,
   StyleSheet,
-  View,
   Text,
   Pressable,
   TextInput,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { Color, FontFamily, FontSize, Border } from "../GlobalStyles";
 
 const SignUpPhone = () => {
@@ -45,17 +45,17 @@ const SignUpPhone = () => {
         <Text style={[styles.text10, styles.textTypo2]}>00:42</Text>
       </View>
       <View style={styles.giriYapParent}>
-        <Text style={[styles.giriYap, styles.giriYapTypo]}>Giriş Yap</Text>
+        <Text style={[styles.giriYap, styles.giriYapPosition]}>Giriş Yap</Text>
         <Pressable style={[styles.btnBack, styles.containerPosition]}>
           <View style={[styles.container1, styles.blankBorder]} />
           <Image
-            style={[styles.rightIcon, styles.rightIconLayout]}
+            style={[styles.rightIcon, styles.giriYapPosition]}
             resizeMode="cover"
             source={require("../assets/right.png")}
           />
         </Pressable>
       </View>
-      <Text style={[styles.sendAgain, styles.giriYapTypo]}>Tekrar Gönder</Text>
+      <Pressable style={styles.sendAgain} />
       <View style={styles.enterOtpInput}>
         <TextInput
           style={[styles.blank, styles.textinputPosition]}
@@ -126,8 +126,8 @@ const styles = StyleSheet.create({
     width: "32.23%",
     position: "absolute",
   },
-  giriYapTypo: {
-    fontSize: FontSize.size_base,
+  giriYapPosition: {
+    top: "26.92%",
     position: "absolute",
   },
   blankBorder: {
@@ -262,12 +262,12 @@ const styles = StyleSheet.create({
   },
   giriYap: {
     left: "67.5%",
+    fontSize: FontSize.size_base,
     letterSpacing: 0,
     lineHeight: 24,
     fontWeight: "600",
     fontFamily: FontFamily.openSansSemibold,
     color: Color.gray_600,
-    top: "26.92%",
     textAlign: "center",
   },
   container1: {
@@ -287,8 +287,8 @@ const styles = StyleSheet.create({
     bottom: "26.92%",
     left: "26.92%",
     maxHeight: "100%",
-    top: "26.92%",
-    position: "absolute",
+    overflow: "hidden",
+    maxWidth: "100%",
   },
   btnBack: {
     width: "26%",
@@ -310,12 +310,8 @@ const styles = StyleSheet.create({
   sendAgain: {
     bottom: 0,
     left: "34.27%",
-    lineHeight: 24,
-    fontWeight: "700",
-    fontFamily: FontFamily.poppinsBold,
-    color: Color.mediumvioletred_100,
-    textAlign: "left",
     zIndex: 4,
+    position: "absolute",
   },
   blank: {
     left: "79.05%",

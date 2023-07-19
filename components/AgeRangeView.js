@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import { View, StyleSheet, Text } from "react-native";
 import { Slider as RNESlider } from "@rneui/themed";
 import { FontSize, FontFamily, Color } from "../GlobalStyles";
 
-const AgeRangeView = () => {
+const AgeRangeView = memo(() => {
   const [sliderValue, setSliderValue] = useState(10);
 
   return (
     <View style={styles.age}>
       <RNESlider
         style={[styles.slider, styles.sliderPosition]}
+        maximumValue={100}
         step={1}
         minimumValue
-        maximumValue={100}
         value={sliderValue}
         onValueChange={setSliderValue}
         thumbStyle={styles.sliderts}
@@ -24,7 +24,7 @@ const AgeRangeView = () => {
       <Text style={[styles.yaAral, styles.sliderPosition]}>Yaş Aralığı</Text>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   sliderts: {

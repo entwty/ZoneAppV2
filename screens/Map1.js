@@ -1,6 +1,6 @@
 import * as React from "react";
+import { View, Image, StyleSheet, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Image, StyleSheet, View, Text } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import { Color, FontFamily, FontSize, Padding, Border } from "../GlobalStyles";
 

@@ -1,8 +1,8 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { View, StyleSheet, Text } from "react-native";
 import { FontSize, Color, FontFamily, Border } from "../GlobalStyles";
 
-const InterestCard = () => {
+const InterestCard = memo(() => {
   return (
     <View style={styles.interestedIn}>
       <View style={[styles.container, styles.containerPosition]} />
@@ -15,7 +15,7 @@ const InterestCard = () => {
       <Text style={[styles.banaGster, styles.kzTypo]}>Bana Göster</Text>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   containerPosition: {

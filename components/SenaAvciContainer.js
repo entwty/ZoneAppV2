@@ -1,8 +1,8 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { StyleSheet, View, Text, Image } from "react-native";
 import { FontSize, Color, FontFamily } from "../GlobalStyles";
 
-const SenaAvciContainer = () => {
+const SenaAvciContainer = memo(() => {
   return (
     <View style={styles.containerParent}>
       <View style={[styles.container, styles.dividerLayout]}>
@@ -26,7 +26,7 @@ const SenaAvciContainer = () => {
       </View>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   dividerLayout: {

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { View, Image, StyleSheet, Pressable, Text } from "react-native";
-import { Checkbox as RNPCheckbox } from "react-native-paper";
+import { Checkbox } from "react-native-paper";
 import { Color, Border, FontSize, FontFamily } from "../GlobalStyles";
 
 const IdealMatch = () => {
-  const [groupCheckboxchecked, setGroupCheckboxchecked] = useState(undefined);
-  const [groupCheckbox1checked, setGroupCheckbox1checked] = useState(undefined);
-  const [groupCheckbox2checked, setGroupCheckbox2checked] = useState(undefined);
-  const [groupCheckbox3checked, setGroupCheckbox3checked] = useState(undefined);
+  const [groupCheckboxchecked, setGroupCheckboxchecked] = useState(false);
+  const [groupCheckbox1checked, setGroupCheckbox1checked] = useState(false);
+  const [groupCheckbox2checked, setGroupCheckbox2checked] = useState(false);
+  const [groupCheckbox3checked, setGroupCheckbox3checked] = useState(false);
 
   return (
     <View style={[styles.idealMatch, styles.containerLayout1]}>
@@ -34,28 +34,28 @@ const IdealMatch = () => {
       </Pressable>
       <View style={styles.groupParent}>
         <View style={[styles.wrapper, styles.framePosition]}>
-          <RNPCheckbox
+          <Checkbox
             status={groupCheckboxchecked ? "checked" : "unchecked"}
             onPress={() => setGroupCheckboxchecked(!groupCheckboxchecked)}
             color="#fae6f3"
           />
         </View>
         <View style={[styles.frame, styles.framePosition]}>
-          <RNPCheckbox
+          <Checkbox
             status={groupCheckbox1checked ? "checked" : "unchecked"}
             onPress={() => setGroupCheckbox1checked(!groupCheckbox1checked)}
             color="#fae6f3"
           />
         </View>
         <View style={[styles.groupView, styles.wrapper1Position]}>
-          <RNPCheckbox
+          <Checkbox
             status={groupCheckbox2checked ? "checked" : "unchecked"}
             onPress={() => setGroupCheckbox2checked(!groupCheckbox2checked)}
             color="#fae6f3"
           />
         </View>
         <View style={[styles.wrapper1, styles.wrapper1Position]}>
-          <RNPCheckbox
+          <Checkbox
             status={groupCheckbox3checked ? "checked" : "unchecked"}
             onPress={() => setGroupCheckbox3checked(!groupCheckbox3checked)}
             color="#fae6f3"

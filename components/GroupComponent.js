@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { memo } from "react";
 import {
   StyleProp,
   ViewStyle,
@@ -10,7 +10,7 @@ import {
 import LinearGradient from "react-native-linear-gradient";
 import { Border, FontSize, FontFamily, Color } from "../GlobalStyles";
 
-const GroupComponent = ({ style }) => {
+const GroupComponent = memo(({ style }) => {
   return (
     <View style={[styles.goldPaketParent, style]}>
       <Text style={[styles.goldPaket, styles.goldPaketPosition]}>
@@ -34,7 +34,7 @@ const GroupComponent = ({ style }) => {
       />
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   goldPaketPosition: {

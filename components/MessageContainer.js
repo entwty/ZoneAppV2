@@ -1,8 +1,8 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { Image, StyleSheet, View, Text } from "react-native";
 import { FontSize, Color, FontFamily } from "../GlobalStyles";
 
-const MessageContainer = () => {
+const MessageContainer = memo(() => {
   return (
     <View style={styles.greenStatusParent}>
       <Image
@@ -32,7 +32,7 @@ const MessageContainer = () => {
       <Text style={[styles.message, styles.name1Typo]}>:)</Text>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   iconPosition: {

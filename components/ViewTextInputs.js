@@ -1,8 +1,8 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { View, Text, StyleSheet, Pressable, TextInput } from "react-native";
 import { FontSize, FontFamily, Color, Border } from "../GlobalStyles";
 
-const ViewTextInputs = () => {
+const ViewTextInputs = memo(() => {
   return (
     <View style={styles.hogeldinizLtfenGeerliTParent}>
       <Text style={styles.hogeldinizLtfenContainer}>
@@ -24,7 +24,7 @@ const ViewTextInputs = () => {
       />
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   hogeldiniz: {

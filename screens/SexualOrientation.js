@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { View, Image, StyleSheet, Pressable, Text } from "react-native";
-import { Checkbox as RNPCheckbox } from "react-native-paper";
+import { Checkbox } from "react-native-paper";
 import { Color, Border, FontSize, FontFamily } from "../GlobalStyles";
 
 const SexualOrientation = () => {
-  const [manchecked, setManchecked] = useState(undefined);
-  const [womanchecked, setWomanchecked] = useState(undefined);
-  const [woman1checked, setWoman1checked] = useState(undefined);
-  const [woman2checked, setWoman2checked] = useState(undefined);
-  const [woman3checked, setWoman3checked] = useState(undefined);
+  const [manchecked, setManchecked] = useState(false);
+  const [womanchecked, setWomanchecked] = useState(false);
+  const [woman1checked, setWoman1checked] = useState(false);
+  const [woman2checked, setWoman2checked] = useState(false);
+  const [woman3checked, setWoman3checked] = useState(false);
 
   return (
     <View style={[styles.sexualOrientation, styles.containerLayout1]}>
@@ -19,35 +19,35 @@ const SexualOrientation = () => {
       />
       <View style={styles.manParent}>
         <View style={[styles.man, styles.womanPosition]}>
-          <RNPCheckbox
+          <Checkbox
             status={manchecked ? "checked" : "unchecked"}
             onPress={() => setManchecked(!manchecked)}
             color="#cc078a"
           />
         </View>
         <View style={styles.woman}>
-          <RNPCheckbox
+          <Checkbox
             status={womanchecked ? "checked" : "unchecked"}
             onPress={() => setWomanchecked(!womanchecked)}
             color="#fff"
           />
         </View>
         <View style={[styles.woman1, styles.womanPosition]}>
-          <RNPCheckbox
+          <Checkbox
             status={woman1checked ? "checked" : "unchecked"}
             onPress={() => setWoman1checked(!woman1checked)}
             color="#fff"
           />
         </View>
         <View style={[styles.woman2, styles.womanPosition]}>
-          <RNPCheckbox
+          <Checkbox
             status={woman2checked ? "checked" : "unchecked"}
             onPress={() => setWoman2checked(!woman2checked)}
             color="#fff"
           />
         </View>
         <View style={styles.woman3}>
-          <RNPCheckbox
+          <Checkbox
             status={woman3checked ? "checked" : "unchecked"}
             onPress={() => setWoman3checked(!woman3checked)}
             color="#fff"

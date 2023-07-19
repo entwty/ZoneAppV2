@@ -65,11 +65,11 @@ const Onboarding4 = () => {
       </Pressable>
       <View style={styles.slide}>
         <Carousel
-          width={313}
+          style={styles.carousel}
+          width
           mode="normal"
-          autoPlay="false"
-          loop="true"
-          pagingEnabled="true"
+          loop={true}
+          pagingEnabled={true}
           data={slideItems}
           renderItem={({ item }) => item}
         />
@@ -170,6 +170,10 @@ const styles = StyleSheet.create({
   },
   rectangleParent: {
     marginTop: 339,
+  },
+  carousel: {
+    width: 313,
+    height: 500,
   },
   slide: {
     top: 74,

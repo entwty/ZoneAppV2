@@ -27,9 +27,9 @@ const Loading3 = () => {
       />
       <ActivityIndicator
         style={styles.loading3Child}
+        animating={groupActivityIndicatorAnimating}
         size="3x"
         color="#939393"
-        animating={groupActivityIndicatorAnimating}
       />
     </LinearGradient>
   );

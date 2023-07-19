@@ -1,8 +1,8 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { View, Image, StyleSheet, Pressable, Text } from "react-native";
 import { FontSize, FontFamily, Color } from "../GlobalStyles";
 
-const GalleryView = () => {
+const GalleryView = memo(() => {
   return (
     <View style={styles.fotoParent}>
       <Image
@@ -30,11 +30,11 @@ const GalleryView = () => {
         resizeMode="cover"
         source={require("../assets/foto4.png")}
       />
-      <Text style={[styles.readMore, styles.galeriFlexBox]}>Tümünü Gör</Text>
-      <Text style={[styles.galeri, styles.galeriFlexBox]}>Galeri</Text>
+      <Pressable style={styles.readMore} />
+      <Text style={styles.galeri}>Galeri</Text>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   fotoIconPosition1: {
@@ -45,10 +45,6 @@ const styles = StyleSheet.create({
   fotoIconPosition: {
     height: 139,
     top: 270,
-    position: "absolute",
-  },
-  galeriFlexBox: {
-    textAlign: "left",
     position: "absolute",
   },
   fotoIcon: {
@@ -80,11 +76,7 @@ const styles = StyleSheet.create({
   readMore: {
     top: 3,
     left: 248,
-    fontSize: FontSize.size_sm,
-    lineHeight: 21,
-    fontWeight: "500",
-    fontFamily: FontFamily.poppinsMedium,
-    color: Color.mediumvioletred_100,
+    position: "absolute",
   },
   galeri: {
     top: 0,
@@ -93,7 +85,9 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     fontFamily: FontFamily.poppinsSemibold,
     color: Color.black000000,
+    textAlign: "left",
     left: 0,
+    position: "absolute",
   },
   fotoParent: {
     top: 925,

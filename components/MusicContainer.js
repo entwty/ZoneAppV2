@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, memo } from "react";
 import {
   StyleSheet,
   View,
@@ -12,26 +12,28 @@ const getStyleValue = (key, value) => {
   if (value === undefined) return;
   return { [key]: value === "unset" ? undefined : value };
 };
-const MusicContainer = ({ musicImageUrl, mediaType, propTop, propLeft }) => {
-  const viewStyle = useMemo(() => {
-    return {
-      ...getStyleValue("top", propTop),
-      ...getStyleValue("left", propLeft),
-    };
-  }, [propTop, propLeft]);
+const MusicContainer = memo(
+  ({ musicImageUrl, mediaType, propTop, propLeft }) => {
+    const viewStyle = useMemo(() => {
+      return {
+        ...getStyleValue("top", propTop),
+        ...getStyleValue("left", propLeft),
+      };
+    }, [propTop, propLeft]);
 
-  return (
-    <View style={[styles.view, styles.viewLayout, viewStyle]}>
-      <View style={[styles.container, styles.viewLayout]} />
-      <Image
-        style={styles.musicIcon}
-        resizeMode="cover"
-        source={musicImageUrl}
-      />
-      <Text style={styles.music}>{mediaType}</Text>
-    </View>
-  );
-};
+    return (
+      <View style={[styles.view, styles.viewLayout, viewStyle]}>
+        <View style={[styles.container, styles.viewLayout]} />
+        <Image
+          style={styles.musicIcon}
+          resizeMode="cover"
+          source={musicImageUrl}
+        />
+        <Text style={styles.music}>{mediaType}</Text>
+      </View>
+    );
+  }
+);
 
 const styles = StyleSheet.create({
   viewLayout: {

@@ -1,8 +1,8 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { Pressable, StyleSheet, View, Image, Text } from "react-native";
 import { Color, FontFamily, FontSize, Border } from "../GlobalStyles";
 
-const LocationContainer = () => {
+const LocationContainer = memo(() => {
   return (
     <View style={[styles.inputtextnone, styles.containerPosition1]}>
       <Pressable style={[styles.container, styles.containerPosition]} />
@@ -30,7 +30,7 @@ const LocationContainer = () => {
       </View>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   containerPosition1: {

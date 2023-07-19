@@ -2,12 +2,12 @@ const Stack = createNativeStackNavigator();
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 
-import Loading3 from "./screens/Loading3";
-import Messages from "./screens/Messages";
-import Like from "./screens/Like";
 import Map1 from "./screens/Map1";
+import Like from "./screens/Like";
 import Profile from "./screens/Profile";
+import Messages from "./screens/Messages";
 import Home from "./screens/Home";
+import Loading3 from "./screens/Loading3";
 import SignUp from "./screens/SignUp";
 import Welcome from "./screens/Welcome";
 import Onboarding4 from "./screens/Onboarding4";
@@ -41,8 +41,8 @@ import Icon3 from "./components/Icon3";
 import Icon2 from "./components/Icon2";
 import Component1Icon1 from "./components/Component1Icon1";
 import Component1Icon from "./components/Component1Icon";
-import Icon1 from "./components/Icon1";
-import Icon from "./components/Icon";
+import Icon11 from "./components/Icon1";
+import Icon1 from "./components/Icon";
 import MIcon from "react-native-vector-icons/MaterialCommunityIcons";
 import { IconRegistry, ApplicationProvider } from "@ui-kitten/components";
 import * as eva from "@eva-design/eva";
@@ -65,14 +65,14 @@ function BottomTabsRoot({ navigation }) {
     <Icon4 />,
     <Icon2 />,
     <Component1Icon />,
-    <Icon />,
+    <Icon1 />,
   ]);
   const [bottomTabItemsActive] = React.useState([
     <ZoneIkonGradient11 />,
     <Icon5 />,
     <Icon3 />,
     <Component1Icon1 />,
-    <Icon1 />,
+    <Icon11 />,
   ]);
   return (
     <Tab.Navigator

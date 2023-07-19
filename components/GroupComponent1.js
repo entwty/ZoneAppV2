@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { memo } from "react";
 import {
   StyleProp,
   ViewStyle,
@@ -10,7 +10,7 @@ import {
 import LinearGradient from "react-native-linear-gradient";
 import { Border, FontSize, FontFamily, Color } from "../GlobalStyles";
 
-const GroupComponent1 = ({ style }) => {
+const GroupComponent1 = memo(({ style }) => {
   return (
     <View style={[styles.elemeParent, style]}>
       <Text style={[styles.eleme, styles.elemePosition]}>Eşleşme</Text>
@@ -31,7 +31,7 @@ const GroupComponent1 = ({ style }) => {
       />
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   elemePosition: {

@@ -1,8 +1,8 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 import { Color, FontSize, FontFamily } from "../GlobalStyles";
 
-const UserInfoContainer = () => {
+const UserInfoContainer = memo(() => {
   return (
     <View style={[styles.maskGroup, styles.maskGroupTransform]}>
       <Image
@@ -30,7 +30,7 @@ const UserInfoContainer = () => {
       />
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   maskGroupTransform: {

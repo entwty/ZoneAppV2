@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, memo } from "react";
 import {
   View,
   Image,
@@ -13,63 +13,67 @@ const getStyleValue = (key, value) => {
   if (value === undefined) return;
   return { [key]: value === "unset" ? undefined : value };
 };
-const PasswordResetView = ({
-  passwordResetImageUrl,
-  passwordResetText,
-  passwordResetStatusText,
-  returnToPasswordResetScre,
-  propBorderRadius,
-  propLeft,
-}) => {
-  const framePressableStyle = useMemo(() => {
-    return {
-      ...getStyleValue("borderRadius", propBorderRadius),
-    };
-  }, [propBorderRadius]);
+const PasswordResetView = memo(
+  ({
+    passwordResetImageUrl,
+    passwordResetText,
+    passwordResetStatusText,
+    returnToPasswordResetScre,
+    propBorderRadius,
+    propLeft,
+  }) => {
+    const framePressableStyle = useMemo(() => {
+      return {
+        ...getStyleValue("borderRadius", propBorderRadius),
+      };
+    }, [propBorderRadius]);
 
-  const ifreYenilemeEkrannaStyle = useMemo(() => {
-    return {
-      ...getStyleValue("left", propLeft),
-    };
-  }, [propLeft]);
+    const ifreYenilemeEkrannaStyle = useMemo(() => {
+      return {
+        ...getStyleValue("left", propLeft),
+      };
+    }, [propLeft]);
 
-  return (
-    <View style={styles.successmarkParent}>
-      <Image
-        style={[styles.successmarkIcon, styles.successmarkIconPosition]}
-        resizeMode="cover"
-        source={passwordResetImageUrl}
-      />
-      <Text
-        style={[
-          styles.ifrenizDeitirilemediContainer,
-          styles.ifreYenilemeEkrannaFlexBox,
-        ]}
-      >
-        <Text style={styles.ifrenizDeitirilemedi}>{`Şifreniz Değiştirilemedi !
-`}</Text>
-        <Text style={styles.ltfenTekrarDeneyiniz}>Lütfen tekrar deneyiniz</Text>
-      </Text>
-      <Pressable
-        style={[
-          styles.ifreYenilemeEkrannaDnWrapper,
-          styles.successmarkIconPosition,
-          framePressableStyle,
-        ]}
-      >
+    return (
+      <View style={styles.successmarkParent}>
+        <Image
+          style={[styles.successmarkIcon, styles.successmarkIconPosition]}
+          resizeMode="cover"
+          source={passwordResetImageUrl}
+        />
         <Text
           style={[
-            styles.ifreYenilemeEkranna,
+            styles.ifrenizDeitirilemediContainer,
             styles.ifreYenilemeEkrannaFlexBox,
-            ifreYenilemeEkrannaStyle,
           ]}
         >
-          {returnToPasswordResetScre}
+          <Text style={styles.ifrenizDeitirilemedi}>{`Şifreniz Değiştirilemedi !
+`}</Text>
+          <Text style={styles.ltfenTekrarDeneyiniz}>
+            Lütfen tekrar deneyiniz
+          </Text>
         </Text>
-      </Pressable>
-    </View>
-  );
-};
+        <Pressable
+          style={[
+            styles.ifreYenilemeEkrannaDnWrapper,
+            styles.successmarkIconPosition,
+            framePressableStyle,
+          ]}
+        >
+          <Text
+            style={[
+              styles.ifreYenilemeEkranna,
+              styles.ifreYenilemeEkrannaFlexBox,
+              ifreYenilemeEkrannaStyle,
+            ]}
+          >
+            {returnToPasswordResetScre}
+          </Text>
+        </Pressable>
+      </View>
+    );
+  }
+);
 
 const styles = StyleSheet.create({
   successmarkIconPosition: {

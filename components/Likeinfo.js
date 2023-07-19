@@ -1,8 +1,8 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { Text, StyleSheet, View } from "react-native";
 import { FontSize, FontFamily, Color } from "../GlobalStyles";
 
-const Likeinfo = () => {
+const Likeinfo = memo(() => {
   return (
     <View style={styles.nameParent}>
       <Text style={[styles.name, styles.namePosition]}>
@@ -11,7 +11,7 @@ const Likeinfo = () => {
       <Text style={[styles.time, styles.namePosition]}>10 dakika önce</Text>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   namePosition: {

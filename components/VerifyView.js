@@ -1,8 +1,8 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { View, Text, StyleSheet, Pressable, TextInput } from "react-native";
 import { FontSize, FontFamily, Color, Border } from "../GlobalStyles";
 
-const VerifyView = () => {
+const VerifyView = memo(() => {
   return (
     <View style={styles.otpDorulamaEPostaAdresiniParent}>
       <Text style={styles.otpDorulamaEPostaContainer}>
@@ -42,7 +42,7 @@ const VerifyView = () => {
       </View>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   textinputPosition: {

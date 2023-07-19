@@ -1,7 +1,7 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { StyleProp, ViewStyle, Image, StyleSheet } from "react-native";
 
-const Icon1 = ({ style }) => {
+const Icon11 = memo(({ style }) => {
   return (
     <Image
       style={[styles.icon, style]}
@@ -9,7 +9,7 @@ const Icon1 = ({ style }) => {
       source={require("../assets/21.png")}
     />
   );
-};
+});
 
 const styles = StyleSheet.create({
   icon: {
@@ -18,4 +18,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Icon1;
+export default Icon11;

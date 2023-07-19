@@ -1,9 +1,9 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { StyleProp, ViewStyle, StyleSheet, View, Text } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import { FontFamily, Color, Border, FontSize } from "../GlobalStyles";
 
-const FrameComponent4 = ({ style }) => {
+const FrameComponent4 = memo(({ style }) => {
   return (
     <View style={[styles.rectangleParent, style, styles.frameChildLayout]}>
       <LinearGradient
@@ -24,7 +24,7 @@ const FrameComponent4 = ({ style }) => {
       <Text style={[styles.ndrm, styles.ndrmPosition]}>%30 İNDİRİM</Text>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   frameChildLayout: {

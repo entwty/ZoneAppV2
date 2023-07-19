@@ -20,7 +20,11 @@ const AllMatches = () => {
         source={require("../assets/status-bar--iphone-x-or-newer4.png")}
       />
       <ViewButtons />
-      <ScrollView style={styles.groupParent}>
+      <ScrollView
+        style={styles.groupParent}
+        showsVerticalScrollIndicator={true}
+        showsHorizontalScrollIndicator={true}
+      >
         <View
           style={[styles.unsplashprxsooayqggParent, styles.groupChildLayout1]}
         >

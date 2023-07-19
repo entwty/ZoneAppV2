@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, memo } from "react";
 import {
   Image,
   StyleSheet,
@@ -12,59 +12,55 @@ const getStyleValue = (key, value) => {
   if (value === undefined) return;
   return { [key]: value === "unset" ? undefined : value };
 };
-const ImageContainer = ({
-  carImageUrl,
-  propDisplay,
-  propRight,
-  propLeft,
-  propTop,
-}) => {
-  const maskGroupStyle = useMemo(() => {
-    return {
-      ...getStyleValue("display", propDisplay),
-    };
-  }, [propDisplay]);
+const ImageContainer = memo(
+  ({ carImageUrl, propDisplay, propRight, propLeft, propTop }) => {
+    const maskGroupStyle = useMemo(() => {
+      return {
+        ...getStyleValue("display", propDisplay),
+      };
+    }, [propDisplay]);
 
-  const photoIconStyle = useMemo(() => {
-    return {
-      ...getStyleValue("right", propRight),
-      ...getStyleValue("left", propLeft),
-    };
-  }, [propRight, propLeft]);
+    const photoIconStyle = useMemo(() => {
+      return {
+        ...getStyleValue("right", propRight),
+        ...getStyleValue("left", propLeft),
+      };
+    }, [propRight, propLeft]);
 
-  const maskGroupIconStyle = useMemo(() => {
-    return {
-      ...getStyleValue("top", propTop),
-    };
-  }, [propTop]);
+    const maskGroupIconStyle = useMemo(() => {
+      return {
+        ...getStyleValue("top", propTop),
+      };
+    }, [propTop]);
 
-  return (
-    <View style={[styles.maskGroup, maskGroupStyle]}>
-      <Image
-        style={[styles.photoIcon, photoIconStyle]}
-        resizeMode="cover"
-        source={require("../assets/photo1.png")}
-      />
-      <View style={[styles.maskGroup1, styles.maskGroupPosition]}>
+    return (
+      <View style={[styles.maskGroup, maskGroupStyle]}>
         <Image
-          style={[
-            styles.maskGroupIcon,
-            styles.maskGroupPosition,
-            maskGroupIconStyle,
-          ]}
+          style={[styles.photoIcon, photoIconStyle]}
           resizeMode="cover"
-          source={carImageUrl}
+          source={require("../assets/photo1.png")}
         />
-        <Text style={[styles.almilaAkgz23, styles.almilaAkgz23Position]}>
-          Almila Açıkgöz, 23
-        </Text>
-        <Text style={[styles.profesyonelModel, styles.almilaAkgz23Position]}>
-          Profesyonel Model
-        </Text>
+        <View style={[styles.maskGroup1, styles.maskGroupPosition]}>
+          <Image
+            style={[
+              styles.maskGroupIcon,
+              styles.maskGroupPosition,
+              maskGroupIconStyle,
+            ]}
+            resizeMode="cover"
+            source={carImageUrl}
+          />
+          <Text style={[styles.almilaAkgz23, styles.almilaAkgz23Position]}>
+            Almila Açıkgöz, 23
+          </Text>
+          <Text style={[styles.profesyonelModel, styles.almilaAkgz23Position]}>
+            Profesyonel Model
+          </Text>
+        </View>
       </View>
-    </View>
-  );
-};
+    );
+  }
+);
 
 const styles = StyleSheet.create({
   maskGroupPosition: {

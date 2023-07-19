@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import {
   View,
   Dimensions,
@@ -11,7 +11,7 @@ import FrameComponent3 from "FrameComponent3";
 import FrameComponent2 from "./FrameComponent2";
 import FrameComponent1 from "./FrameComponent1";
 
-const FrameComponent3 = ({ style }) => {
+const FrameComponent3 = memo(({ style }) => {
   const [frameCarouselItems, setFrameCarouselItems] = useState([
     <FrameComponent3 />,
     <FrameComponent2 />,
@@ -21,17 +21,22 @@ const FrameComponent3 = ({ style }) => {
   return (
     <View style={[styles.parent, style]}>
       <Carousel
-        width={Dimensions.get("window").width}
+        style={styles.carousel}
+        width={102}
         mode="normal"
-        pagingEnabled="true"
+        pagingEnabled={true}
         data={frameCarouselItems}
         renderItem={({ item }) => item}
       />
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
+  carousel: {
+    width: 102,
+    height: 128,
+  },
   parent: {
     width: 102,
     height: 128,

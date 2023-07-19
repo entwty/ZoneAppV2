@@ -42,7 +42,7 @@ const Profile1 = () => {
         style={[styles.inputFirstName2, styles.inputPosition]}
         placeholder="Hakkında"
         keyboardType="default"
-        multiline
+        multiline={true}
         placeholderTextColor="rgba(0, 0, 0, 0.4)"
       />
       <RNKDatepicker
@@ -87,15 +87,7 @@ const styles = StyleSheet.create({
     color: "#cc078a",
     fontSize: 14,
   },
-  inputCalendarDatePickerValue: {
-    position: "absolute",
-    height: "7.14%",
-    width: "88%",
-    top: "57.27%",
-    right: "5.87%",
-    bottom: "35.59%",
-    left: "6.13%",
-  },
+  inputCalendarDatePickerValue: {},
   profileLayout: {
     width: "100%",
     backgroundColor: Color.whiteFFFFFF,

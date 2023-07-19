@@ -6,10 +6,10 @@ import ImageContainer from "../components/ImageContainer";
 import AgeRangeView from "../components/AgeRangeView";
 import InterestCard from "../components/InterestCard";
 import LocationContainer from "../components/LocationContainer";
-import { Border, Color, FontFamily, FontSize } from "../GlobalStyles";
+import { Border, FontFamily, Color, FontSize } from "../GlobalStyles";
 
 const Filter = () => {
-  const [slider1Value, setSlider1Value] = useState(10);
+  const [sliderValue, setSliderValue] = useState(10);
 
   return (
     <View style={styles.filter}>
@@ -37,8 +37,8 @@ const Filter = () => {
         />
       </View>
       <View style={[styles.stanbulParent, styles.btnBackPosition]}>
-        <Text style={styles.stanbul}>İstanbul</Text>
-        <Text style={styles.kefet}>Keşfet</Text>
+        <Text style={[styles.stanbul, styles.km1Typo]}>İstanbul</Text>
+        <Text style={[styles.kefet, styles.kefetTypo]}>Keşfet</Text>
       </View>
       <Image
         style={styles.btnFilterIcon}
@@ -80,26 +80,26 @@ const Filter = () => {
         />
         <AgeRangeView />
         <InterestCard />
-        <Text style={[styles.temizle, styles.km1FlexBox]}>Temizle</Text>
+        <Pressable style={styles.temizle} />
         <Text style={[styles.filtre, styles.filtreTypo]}>Filtre</Text>
         <View style={[styles.distance, styles.sliderLayout]}>
-          <Text style={[styles.km1, styles.km1FlexBox]}>15km</Text>
+          <Text style={[styles.km1, styles.km1Typo]}>15km</Text>
           <RNESlider
             style={[styles.slider, styles.sliderLayout]}
-            step={1}
             minimumValue={5}
             maximumValue={150}
-            value={slider1Value}
-            onValueChange={setSlider1Value}
-            thumbStyle={styles.slider1ts}
+            step={1}
+            value={sliderValue}
+            onValueChange={setSliderValue}
+            thumbStyle={styles.sliderts}
             thumbTintColor="#ff0000"
             minimumTrackTintColor="#3f3f3f"
             maximumTrackTintColor="#b3b3b3"
           />
-          <Text style={[styles.uzaklk, styles.filtreTypo]}>Uzaklık</Text>
+          <Text style={[styles.uzaklk, styles.uzaklkTypo]}>Uzaklık</Text>
         </View>
         <Pressable style={[styles.uygulaWrapper, styles.containerLayout]}>
-          <Text style={styles.uygula}>Uygula</Text>
+          <Text style={[styles.uygula, styles.uzaklkTypo]}>Uygula</Text>
         </Pressable>
         <View style={styles.inputLastName}>
           <LocationContainer />
@@ -110,7 +110,7 @@ const Filter = () => {
 };
 
 const styles = StyleSheet.create({
-  slider1ts: {
+  sliderts: {
     height: 25,
     width: 25,
   },
@@ -138,29 +138,37 @@ const styles = StyleSheet.create({
     position: "absolute",
     overflow: "hidden",
   },
+  km1Typo: {
+    fontFamily: FontFamily.poppinsRegular,
+    position: "absolute",
+  },
+  kefetTypo: {
+    fontFamily: FontFamily.poppinsBold,
+    fontWeight: "700",
+    textAlign: "center",
+  },
   locationLayout: {
     height: 34,
     width: 61,
     position: "absolute",
   },
   containerPosition: {
-    left: "0%",
     bottom: "0%",
     right: "0%",
+    left: "0%",
     width: "100%",
-  },
-  km1FlexBox: {
-    textAlign: "right",
-    position: "absolute",
   },
   filtreTypo: {
     color: Color.black000000,
     fontFamily: FontFamily.poppinsSemibold,
     fontWeight: "600",
-    position: "absolute",
   },
   sliderLayout: {
     width: 295,
+    position: "absolute",
+  },
+  uzaklkTypo: {
+    fontSize: FontSize.size_base,
     position: "absolute",
   },
   navigationBarIcon: {
@@ -218,17 +226,13 @@ const styles = StyleSheet.create({
     color: Color.gray_600,
     fontSize: FontSize.size_xs,
     fontFamily: FontFamily.poppinsRegular,
-    position: "absolute",
   },
   kefet: {
-    fontFamily: FontFamily.poppinsBold,
-    fontWeight: "700",
     fontSize: FontSize.size_5xl,
-    textAlign: "center",
+    position: "absolute",
     color: Color.gray_600,
     left: "0%",
     top: "0%",
-    position: "absolute",
   },
   stanbulParent: {
     height: "6.28%",
@@ -310,19 +314,15 @@ const styles = StyleSheet.create({
   },
   temizle: {
     left: 294,
-    fontWeight: "500",
-    fontFamily: FontFamily.poppinsMedium,
-    color: Color.mediumvioletred_100,
-    lineHeight: 24,
-    fontSize: FontSize.size_base,
     top: 44,
+    position: "absolute",
   },
   filtre: {
     top: 38,
     left: 157,
     lineHeight: 36,
     fontSize: FontSize.size_5xl,
-    color: Color.black000000,
+    position: "absolute",
     textAlign: "center",
   },
   km1: {
@@ -331,7 +331,6 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_sm,
     lineHeight: 21,
     color: Color.gray_500,
-    fontFamily: FontFamily.poppinsRegular,
     textAlign: "right",
   },
   slider: {
@@ -341,7 +340,9 @@ const styles = StyleSheet.create({
   },
   uzaklk: {
     lineHeight: 24,
-    fontSize: FontSize.size_base,
+    color: Color.black000000,
+    fontFamily: FontFamily.poppinsSemibold,
+    fontWeight: "600",
     textAlign: "left",
     top: 0,
     left: 0,
@@ -355,12 +356,10 @@ const styles = StyleSheet.create({
     top: 12,
     left: 135,
     lineHeight: 24,
-    fontSize: FontSize.size_base,
     color: Color.whiteFFFFFF,
     fontFamily: FontFamily.poppinsBold,
     fontWeight: "700",
     textAlign: "center",
-    position: "absolute",
   },
   uygulaWrapper: {
     height: "7.43%",
@@ -384,6 +383,7 @@ const styles = StyleSheet.create({
   containerParent: {
     height: "79.56%",
     top: "20.44%",
+    left: "0%",
     position: "absolute",
   },
   filter: {

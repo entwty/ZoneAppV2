@@ -1,7 +1,7 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { StyleProp, ViewStyle, Image, StyleSheet } from "react-native";
 
-const NavigationBarIcon1 = ({ style }) => {
+const NavigationBarIcon1 = memo(({ style }) => {
   return (
     <Image
       style={[styles.navigationBarIcon, style]}
@@ -9,7 +9,7 @@ const NavigationBarIcon1 = ({ style }) => {
       source={require("../assets/navigation-bar2.png")}
     />
   );
-};
+});
 
 const styles = StyleSheet.create({
   navigationBarIcon: {

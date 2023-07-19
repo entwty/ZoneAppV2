@@ -1,8 +1,8 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { StyleProp, ViewStyle, StyleSheet, View, Text } from "react-native";
 import { Color, FontSize, Border, FontFamily } from "../GlobalStyles";
 
-const FrameComponent = ({ style }) => {
+const FrameComponent = memo(({ style }) => {
   return (
     <View style={[styles.frameParent, style]}>
       <View style={styles.groupPosition}>
@@ -21,7 +21,7 @@ const FrameComponent = ({ style }) => {
       <Text style={[styles.enPopler, styles.ayTypo]}>EN POPÜLER</Text>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   groupPosition: {

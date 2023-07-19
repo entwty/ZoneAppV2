@@ -1,5 +1,5 @@
 {
-  "name": "zoneapp",
+  "name": "Zone",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -30,7 +30,7 @@
     "@react-native-community/viewpager": "^5.0.11",
     		"react-native-linear-gradient": "^2.6.2",
 		"react-native-reanimated-carousel": "3.0.0",
-		"@ui-kitten/components": "^5.1.2",
+		"@ui-kitten/components": "5.1.2",
 		"@eva-design/eva": "^2.1.1",
 		"react-native-svg": "13.4.0",
 		"react-native-paper": "^4.12.2",

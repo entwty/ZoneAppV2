@@ -1,15 +1,15 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { StyleSheet, View, Text } from "react-native";
 import { Border, Color, FontSize, FontFamily } from "../GlobalStyles";
 
-const TimeText = () => {
+const TimeText = memo(() => {
   return (
     <View style={[styles.rectangleParent, styles.frameChildLayout]}>
       <View style={[styles.frameChild, styles.frameChildLayout]} />
       <Text style={styles.bugn}>Bugün</Text>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   frameChildLayout: {

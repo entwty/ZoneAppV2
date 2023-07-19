@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, memo } from "react";
 import {
   Image,
   StyleSheet,
@@ -13,62 +13,64 @@ const getStyleValue = (key, value) => {
   if (value === undefined) return;
   return { [key]: value === "unset" ? undefined : value };
 };
-const ProfileContainer = ({
-  profileImageUrl,
-  profileName,
-  profileOccupation,
-  propTop,
-  propLeft,
-  propWidth,
-  propHeight,
-}) => {
-  const groupViewStyle = useMemo(() => {
-    return {
-      ...getStyleValue("top", propTop),
-      ...getStyleValue("left", propLeft),
-    };
-  }, [propTop, propLeft]);
+const ProfileContainer = memo(
+  ({
+    profileImageUrl,
+    profileName,
+    profileOccupation,
+    propTop,
+    propLeft,
+    propWidth,
+    propHeight,
+  }) => {
+    const groupViewStyle = useMemo(() => {
+      return {
+        ...getStyleValue("top", propTop),
+        ...getStyleValue("left", propLeft),
+      };
+    }, [propTop, propLeft]);
 
-  const unsplashplsF6obTgmsIconStyle = useMemo(() => {
-    return {
-      ...getStyleValue("width", propWidth),
-      ...getStyleValue("height", propHeight),
-    };
-  }, [propWidth, propHeight]);
+    const unsplashplsF6obTgmsIconStyle = useMemo(() => {
+      return {
+        ...getStyleValue("width", propWidth),
+        ...getStyleValue("height", propHeight),
+      };
+    }, [propWidth, propHeight]);
 
-  return (
-    <View
-      style={[
-        styles.unsplashplsf6obtgmsParent,
-        styles.groupChildLayout,
-        groupViewStyle,
-      ]}
-    >
-      <Image
+    return (
+      <View
         style={[
-          styles.unsplashplsf6obtgmsIcon,
-          styles.groupChildPosition,
-          unsplashplsF6obTgmsIconStyle,
+          styles.unsplashplsf6obtgmsParent,
+          styles.groupChildLayout,
+          groupViewStyle,
         ]}
-        resizeMode="cover"
-        source={profileImageUrl}
-      />
-      <LinearGradient
-        style={[styles.groupChild, styles.groupChildPosition]}
-        locations={[0.61, 0.72, 1]}
-        colors={["rgba(204, 7, 138, 0)", "rgba(204, 7, 138, 0.4)", "#cc078a"]}
-        useAngle={true}
-        angle={180}
-      />
-      <View style={styles.bra30Parent}>
-        <Text style={[styles.bra30, styles.bra30FlexBox]}>{profileName}</Text>
-        <Text style={[styles.model, styles.bra30FlexBox]}>
-          {profileOccupation}
-        </Text>
+      >
+        <Image
+          style={[
+            styles.unsplashplsf6obtgmsIcon,
+            styles.groupChildPosition,
+            unsplashplsF6obTgmsIconStyle,
+          ]}
+          resizeMode="cover"
+          source={profileImageUrl}
+        />
+        <LinearGradient
+          style={[styles.groupChild, styles.groupChildPosition]}
+          locations={[0.61, 0.72, 1]}
+          colors={["rgba(204, 7, 138, 0)", "rgba(204, 7, 138, 0.4)", "#cc078a"]}
+          useAngle={true}
+          angle={180}
+        />
+        <View style={styles.bra30Parent}>
+          <Text style={[styles.bra30, styles.bra30FlexBox]}>{profileName}</Text>
+          <Text style={[styles.model, styles.bra30FlexBox]}>
+            {profileOccupation}
+          </Text>
+        </View>
       </View>
-    </View>
-  );
-};
+    );
+  }
+);
 
 const styles = StyleSheet.create({
   groupChildLayout: {

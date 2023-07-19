@@ -37,7 +37,7 @@ const ProfileFull = () => {
       </Pressable>
       <View style={[styles.container1, styles.container1Position]} />
       <View style={[styles.readMoreParent, styles.parentLayout]}>
-        <Text style={styles.readMore}>Daha Fazlasını Oku</Text>
+        <Pressable style={styles.readMore} />
         <Text
           style={[styles.merhabaBenAlmila, styles.mimarTypo]}
         >{`Merhaba! Ben Almila. 25 yaşında bir iç mimarım. Burada eğlenmeyi ve yeni arkadaşlar bulmayı umuyorum. Benimle iletişime geçmeni sabırsızlıkla bekliyorum :) `}</Text>
@@ -100,9 +100,9 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   mimarTypo: {
+    textAlign: "left",
     color: Color.gray_500,
     fontFamily: FontFamily.poppinsRegular,
-    textAlign: "left",
     lineHeight: 21,
     fontSize: FontSize.size_sm,
   },
@@ -196,12 +196,6 @@ const styles = StyleSheet.create({
   },
   readMore: {
     top: 118,
-    fontWeight: "600",
-    fontFamily: FontFamily.poppinsSemibold,
-    color: Color.mediumvioletred_100,
-    textAlign: "left",
-    lineHeight: 21,
-    fontSize: FontSize.size_sm,
     left: 0,
     position: "absolute",
   },
@@ -245,9 +239,9 @@ const styles = StyleSheet.create({
   },
   mimar: {
     top: 36,
+    textAlign: "left",
     color: Color.gray_500,
     fontFamily: FontFamily.poppinsRegular,
-    textAlign: "left",
     lineHeight: 21,
     fontSize: FontSize.size_sm,
   },

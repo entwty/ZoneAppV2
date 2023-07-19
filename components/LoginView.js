@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, memo } from "react";
 import { View, Text, StyleSheet, Pressable, Image } from "react-native";
 import { FontSize, FontFamily, Color, Border } from "../GlobalStyles";
 
@@ -6,7 +6,7 @@ const getStyleValue = (key, value) => {
   if (value === undefined) return;
   return { [key]: value === "unset" ? undefined : value };
 };
-const LoginView = ({ propZIndex, propMarginTop }) => {
+const LoginView = memo(({ propZIndex, propMarginTop }) => {
   const groupView1Style = useMemo(() => {
     return {
       ...getStyleValue("zIndex", propZIndex),
@@ -27,7 +27,7 @@ const LoginView = ({ propZIndex, propMarginTop }) => {
       </Pressable>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   giriYapPosition: {

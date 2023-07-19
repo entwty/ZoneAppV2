@@ -1,7 +1,7 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { StyleProp, ViewStyle, Image, StyleSheet } from "react-native";
 
-const ZoneIkonGradient11 = ({ style }) => {
+const ZoneIkonGradient11 = memo(({ style }) => {
   return (
     <Image
       style={[styles.zoneIkonGradient11, style]}
@@ -9,7 +9,7 @@ const ZoneIkonGradient11 = ({ style }) => {
       source={require("../assets/zone-ikon-gradient-1-11.png")}
     />
   );
-};
+});
 
 const styles = StyleSheet.create({
   zoneIkonGradient11: {

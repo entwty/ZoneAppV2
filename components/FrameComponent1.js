@@ -1,8 +1,8 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { StyleProp, ViewStyle, StyleSheet, View, Text } from "react-native";
 import { FontFamily, Border, Color, FontSize } from "../GlobalStyles";
 
-const FrameComponent1 = ({ style }) => {
+const FrameComponent1 = memo(({ style }) => {
   return (
     <View style={[styles.rectangleParent, style, styles.frameChildLayout]}>
       <View style={[styles.frameChild, styles.textPosition]} />
@@ -17,7 +17,7 @@ const FrameComponent1 = ({ style }) => {
       <Text style={[styles.ndrm, styles.ndrmPosition]}>%30 İNDİRİM</Text>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   frameChildLayout: {

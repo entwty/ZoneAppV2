@@ -1,8 +1,8 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { Image, StyleSheet, View, Text } from "react-native";
 import { FontSize, Color, FontFamily } from "../GlobalStyles";
 
-const ContainerCard = () => {
+const ContainerCard = memo(() => {
   return (
     <View style={styles.greenStatusParent}>
       <Image
@@ -31,7 +31,7 @@ const ContainerCard = () => {
       </View>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   iconPosition: {

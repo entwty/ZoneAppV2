@@ -1,8 +1,8 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { View, Text, StyleSheet, TextInput, Pressable } from "react-native";
 import { FontSize, FontFamily, Color, Border } from "../GlobalStyles";
 
-const LoginForm = () => {
+const LoginForm = memo(() => {
   return (
     <View style={styles.hogeldinizSeniTekrarGrdParent}>
       <Text style={styles.hogeldinizSeniContainer}>
@@ -30,7 +30,7 @@ const LoginForm = () => {
       <Text style={styles.ifreniMiUnuttun}>Şifreni mi Unuttun ?</Text>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   registerPosition: {

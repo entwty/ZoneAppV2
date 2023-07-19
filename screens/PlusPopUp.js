@@ -1,13 +1,13 @@
 import * as React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
 import {
+  View,
   Image,
   StyleSheet,
-  View,
   Text,
   Pressable,
   ImageBackground,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import LinearGradient from "react-native-linear-gradient";
 import SpecialOffersView from "../components/SpecialOffersView";
 import { Border, Color, FontFamily, FontSize } from "../GlobalStyles";

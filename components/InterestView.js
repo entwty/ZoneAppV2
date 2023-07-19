@@ -1,9 +1,9 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import MusicContainer from "./MusicContainer";
 import { FontSize, FontFamily, Color } from "../GlobalStyles";
 
-const InterestView = () => {
+const InterestView = memo(() => {
   return (
     <View style={styles.parent}>
       <MusicContainer
@@ -26,7 +26,7 @@ const InterestView = () => {
       <Text style={styles.lgiAlanlar}>İlgi Alanları</Text>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   lgiAlanlar: {

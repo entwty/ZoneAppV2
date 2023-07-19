@@ -1,8 +1,8 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { View, Image, StyleSheet, Text } from "react-native";
 import { Color, FontSize, FontFamily } from "../GlobalStyles";
 
-const SpecialOffersView = () => {
+const SpecialOffersView = memo(() => {
   return (
     <View style={styles.groupParent}>
       <View style={[styles.groupContainer, styles.groupPosition]}>
@@ -31,7 +31,7 @@ kadar eşleştirme`}</Text>
       </Text>
     </View>
   );
-};
+});
 
 const styles = StyleSheet.create({
   groupPosition: {
