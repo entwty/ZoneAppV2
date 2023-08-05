@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   hogeldiniz: {
     fontSize: FontSize.size_7xl,
     fontWeight: "600",
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
     color: Color.black000000,
   },
   ltfenGeerliTelefon: {
@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
     width: "99.7%",
     top: "0%",
     left: "0%",
-    letterSpacing: "-1%",
     textAlign: "left",
     position: "absolute",
   },

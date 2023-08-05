@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
   name1: {
     top: 9,
     fontWeight: "600",
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
     width: 159,
   },
   maskGroupIcon: {

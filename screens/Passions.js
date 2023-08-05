@@ -25,13 +25,13 @@ const Passions = () => {
         source={require("../assets/status-bar--iphone-x-or-newer.png")}
       />
       <Pressable style={styles.devamEtWrapper}>
-        <Text style={[styles.devamEt, styles.devamEtTypo]}>Devam Et</Text>
+        <Text style={[styles.devamEt, styles.skipTypo]}>Devam Et</Text>
       </Pressable>
       <View style={[styles.header, styles.headerPosition]}>
-        <Text style={[styles.lgiAlanlarn, styles.lgiPosition]}>
+        <Text style={[styles.lgiAlanlarn, styles.lgiFlexBox]}>
           İlgi Alanların
         </Text>
-        <Text style={[styles.lgiAlanlarnzdanBirkan, styles.lgiPosition]}>
+        <Text style={[styles.lgiAlanlarnzdanBirkan, styles.lgiFlexBox]}>
           İlgi alanlarınızdan birkaçını seçin ve herkesin neye tutkulu
           olduğunuzu bilmesini sağlayın.
         </Text>
@@ -123,7 +123,7 @@ const Passions = () => {
         </View>
       </View>
       <View style={styles.skipParent}>
-        <Pressable style={styles.skip} />
+        <Text style={[styles.skip, styles.lgiFlexBox]}>Atla</Text>
         <Pressable style={[styles.btnBack, styles.btnBackPosition]}>
           <View style={[styles.container, styles.btnBackPosition]} />
           <Image
@@ -142,19 +142,17 @@ const styles = StyleSheet.create({
     width: "100%",
     backgroundColor: Color.whiteFFFFFF,
   },
-  devamEtTypo: {
+  skipTypo: {
     fontFamily: FontFamily.poppinsBold,
     fontWeight: "700",
   },
   headerPosition: {
-    width: 295,
     left: 40,
+    width: 295,
     position: "absolute",
   },
-  lgiPosition: {
+  lgiFlexBox: {
     textAlign: "left",
-    width: 295,
-    left: 0,
     position: "absolute",
   },
   viewPosition4: {
@@ -196,10 +194,11 @@ const styles = StyleSheet.create({
   devamEt: {
     top: 12,
     left: 125,
-    fontSize: FontSize.size_base,
     lineHeight: 24,
     color: Color.whiteFFFFFF,
     textAlign: "center",
+    fontSize: FontSize.size_base,
+    fontWeight: "700",
     position: "absolute",
   },
   devamEtWrapper: {
@@ -218,8 +217,10 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_15xl,
     lineHeight: 51,
     color: Color.black000000,
+    width: 295,
     fontFamily: FontFamily.poppinsBold,
     fontWeight: "700",
+    left: 0,
     top: 0,
   },
   lgiAlanlarnzdanBirkan: {
@@ -228,10 +229,13 @@ const styles = StyleSheet.create({
     lineHeight: 21,
     fontFamily: FontFamily.poppinsRegular,
     color: Color.gray_500,
+    width: 295,
+    left: 0,
   },
   header: {
     top: 141,
     height: 129,
+    width: 295,
   },
   view: {
     left: 155,
@@ -276,11 +280,16 @@ const styles = StyleSheet.create({
   parent: {
     top: 320,
     height: 320,
+    width: 295,
   },
   skip: {
     top: 14,
     left: 282,
-    position: "absolute",
+    lineHeight: 24,
+    color: Color.mediumvioletred_100,
+    fontFamily: FontFamily.poppinsBold,
+    fontWeight: "700",
+    fontSize: FontSize.size_base,
   },
   container: {
     right: "0%",

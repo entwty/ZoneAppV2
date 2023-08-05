@@ -83,13 +83,13 @@ const styles = StyleSheet.create({
     left: 37,
     fontSize: FontSize.size_sm,
     fontWeight: "600",
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
   },
   ndrm: {
     top: 90,
     left: 31,
     fontWeight: "800",
-    fontFamily: FontFamily.poppinsExtrabold,
+    fontFamily: FontFamily.poppinsExtraBold,
     color: Color.firebrick,
   },
   groupWrapper: {

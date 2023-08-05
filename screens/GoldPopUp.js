@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   textTypo: {
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
     fontWeight: "600",
   },
   ndrmPosition: {
@@ -188,7 +188,7 @@ const styles = StyleSheet.create({
   },
   ndrmTypo: {
     color: Color.goldenrod,
-    fontFamily: FontFamily.poppinsExtrabold,
+    fontFamily: FontFamily.poppinsExtraBold,
     fontWeight: "800",
   },
   groupLayout: {
@@ -335,7 +335,7 @@ const styles = StyleSheet.create({
     bottom: "58.79%",
   },
   zelFrsatlarKarma: {
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
     fontWeight: "600",
     textAlign: "left",
     top: 0,

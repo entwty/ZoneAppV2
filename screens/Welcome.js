@@ -198,7 +198,7 @@ const styles = StyleSheet.create({
     top: 249,
     fontSize: FontSize.size_15xl,
     fontWeight: "800",
-    fontFamily: FontFamily.poppinsExtrabold,
+    fontFamily: FontFamily.poppinsExtraBold,
     zIndex: 3,
     left: "50%",
     color: Color.whiteFFFFFF,
@@ -277,7 +277,7 @@ const styles = StyleSheet.create({
     left: 34,
     fontSize: FontSize.size_lg,
     fontWeight: "600",
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
   },
   rectangleView: {
     borderRadius: Border.br_mini,

@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     lineHeight: 24,
     fontWeight: "600",
-    fontFamily: FontFamily.openSansSemibold,
+    fontFamily: FontFamily.openSansSemiBold,
     color: Color.gray_600,
     textAlign: "center",
   },

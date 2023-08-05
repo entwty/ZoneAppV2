@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_base,
     lineHeight: 24,
     fontWeight: "600",
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
     color: Color.black000000,
     textAlign: "left",
   },

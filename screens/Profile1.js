@@ -83,7 +83,7 @@ const Profile1 = () => {
 const styles = StyleSheet.create({
   inputCalendarDatePickerPlaceHolder: {
     fontWeight: "600",
-    fontFamily: "Poppins_semibold",
+    fontFamily: "Poppins-SemiBold",
     color: "#cc078a",
     fontSize: 14,
   },
@@ -183,7 +183,7 @@ const styles = StyleSheet.create({
     left: "46.52%",
     letterSpacing: 0,
     fontWeight: "600",
-    fontFamily: FontFamily.openSansSemibold,
+    fontFamily: FontFamily.openSansSemiBold,
     color: Color.gray_600,
   },
   container: {

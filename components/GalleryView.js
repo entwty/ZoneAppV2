@@ -30,8 +30,8 @@ const GalleryView = memo(() => {
         resizeMode="cover"
         source={require("../assets/foto4.png")}
       />
-      <Pressable style={styles.readMore} />
-      <Text style={styles.galeri}>Galeri</Text>
+      <Text style={[styles.readMore, styles.galeriFlexBox]}>Tümünü Gör</Text>
+      <Text style={[styles.galeri, styles.galeriFlexBox]}>Galeri</Text>
     </View>
   );
 });
@@ -45,6 +45,10 @@ const styles = StyleSheet.create({
   fotoIconPosition: {
     height: 139,
     top: 270,
+    position: "absolute",
+  },
+  galeriFlexBox: {
+    textAlign: "left",
     position: "absolute",
   },
   fotoIcon: {
@@ -76,18 +80,20 @@ const styles = StyleSheet.create({
   readMore: {
     top: 3,
     left: 248,
-    position: "absolute",
+    fontSize: FontSize.size_sm,
+    lineHeight: 21,
+    fontWeight: "500",
+    fontFamily: FontFamily.poppinsMedium,
+    color: Color.mediumvioletred_100,
   },
   galeri: {
     top: 0,
     fontSize: FontSize.size_base,
     lineHeight: 24,
     fontWeight: "600",
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
     color: Color.black000000,
-    textAlign: "left",
     left: 0,
-    position: "absolute",
   },
   fotoParent: {
     top: 925,

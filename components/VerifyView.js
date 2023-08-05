@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   otpDorulama: {
     fontSize: FontSize.size_7xl,
     fontWeight: "600",
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
     color: Color.black000000,
   },
   ePostaAdresinizeAz: {
@@ -66,7 +66,6 @@ const styles = StyleSheet.create({
   },
   otpDorulamaEPostaContainer: {
     width: "100%",
-    letterSpacing: "-1%",
     textAlign: "left",
     left: "0%",
     top: "0%",

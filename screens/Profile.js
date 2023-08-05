@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     color: "#c80787",
     textAlign: "center",
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
     fontWeight: "600",
     position: "absolute",
   },
@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
     lineHeight: 30,
     color: Color.black000000,
     textAlign: "center",
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
     fontWeight: "600",
   },
   zoneIkonGradient11Parent: {
@@ -285,7 +285,7 @@ const styles = StyleSheet.create({
     left: 122,
     fontSize: FontSize.size_5xl,
     lineHeight: 36,
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
     fontWeight: "600",
   },
   profesyonelFotoraf: {

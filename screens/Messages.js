@@ -147,13 +147,13 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   nameTypo: {
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
     fontWeight: "600",
   },
   senTypo: {
     letterSpacing: -0.1,
     top: "79.78%",
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
     fontWeight: "600",
     lineHeight: 18,
     fontSize: FontSize.size_sm,
@@ -294,7 +294,7 @@ const styles = StyleSheet.create({
   name: {
     top: 9,
     width: 159,
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
     fontWeight: "600",
   },
   maskGroupIcon5: {

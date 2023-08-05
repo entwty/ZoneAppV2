@@ -1,14 +1,14 @@
 /* fonts */
 export const FontFamily = {
-  poppinsMedium: "Poppins_medium",
-  poppinsLight: "Poppins_light",
-  openSansSemibold: "Open Sans_semibold",
-  poppinsRegular: "Poppins_regular",
-  poppinsSemibold: "Poppins_semibold",
-  poppinsBold: "Poppins_bold",
-  poppinsExtrabold: "Poppins_extrabold",
-  openSansBold: "Open Sans_bold",
-  openSansRegular: "Open Sans_regular",
+  poppinsMedium: "Poppins-Medium",
+  poppinsLight: "Poppins-Light",
+  openSansSemiBold: "OpenSans-SemiBold",
+  poppinsRegular: "Poppins-Regular",
+  poppinsSemiBold: "Poppins-SemiBold",
+  poppinsBold: "Poppins-Bold",
+  poppinsExtraBold: "Poppins-ExtraBold",
+  openSansBold: "OpenSans-Bold",
+  openSansRegular: "OpenSans-Regular",
 };
 /* font sizes */
 export const FontSize = {

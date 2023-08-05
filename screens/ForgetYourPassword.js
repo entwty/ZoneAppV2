@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     maxWidth: "100%",
   },
   giriYapTypo: {
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
     fontWeight: "600",
   },
   kodGnderTypo: {
@@ -109,7 +109,6 @@ const styles = StyleSheet.create({
   },
   ifreniMiUnuttunContainer: {
     width: "99.7%",
-    letterSpacing: "-1%",
     textAlign: "left",
     left: "0%",
     top: "0%",
@@ -153,7 +152,7 @@ const styles = StyleSheet.create({
   ifreniMiUnuttun1: {
     left: "41.95%",
     letterSpacing: 0,
-    fontFamily: FontFamily.openSansSemibold,
+    fontFamily: FontFamily.openSansSemiBold,
     textAlign: "center",
     lineHeight: 24,
     fontSize: FontSize.size_base,

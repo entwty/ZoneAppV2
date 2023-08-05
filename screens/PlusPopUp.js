@@ -124,14 +124,14 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   textTypo: {
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
     fontWeight: "600",
     textAlign: "left",
     color: Color.black000000,
     position: "absolute",
   },
   ndrmTypo: {
-    fontFamily: FontFamily.poppinsExtrabold,
+    fontFamily: FontFamily.poppinsExtraBold,
     fontWeight: "800",
     color: Color.whiteFFFFFF,
   },

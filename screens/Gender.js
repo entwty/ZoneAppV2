@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     top: "28.85%",
     left: "70.2%",
     letterSpacing: 0,
-    fontFamily: FontFamily.openSansSemibold,
+    fontFamily: FontFamily.openSansSemiBold,
     color: Color.gray_600,
     fontWeight: "600",
   },
@@ -174,7 +174,7 @@ const styles = StyleSheet.create({
   benBir: {
     fontSize: FontSize.size_15xl,
     lineHeight: 51,
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
     color: Color.black000000,
     textAlign: "left",
     fontWeight: "600",

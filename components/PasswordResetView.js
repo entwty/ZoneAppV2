@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
   ifrenizDeitirilemedi: {
     fontSize: FontSize.size_7xl,
     fontWeight: "600",
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
     color: Color.black000000,
   },
   ltfenTekrarDeneyiniz: {
@@ -110,7 +110,6 @@ const styles = StyleSheet.create({
     width: "100%",
     top: "51.37%",
     left: "0%",
-    letterSpacing: "-1%",
   },
   ifreYenilemeEkranna: {
     top: 12,

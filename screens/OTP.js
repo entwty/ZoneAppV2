@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_base,
     letterSpacing: 0,
     lineHeight: 24,
-    fontFamily: FontFamily.openSansSemibold,
+    fontFamily: FontFamily.openSansSemiBold,
     color: Color.gray_600,
     fontWeight: "600",
   },
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
     color: Color.mediumvioletred_100,
   },
   giriYap: {
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
     fontWeight: "600",
   },
   ifreniHatrladnMContainer: {

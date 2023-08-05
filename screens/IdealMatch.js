@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     left: "47.14%",
     letterSpacing: 0,
     fontWeight: "600",
-    fontFamily: FontFamily.openSansSemibold,
+    fontFamily: FontFamily.openSansSemiBold,
     color: Color.gray_600,
     top: "26.92%",
   },

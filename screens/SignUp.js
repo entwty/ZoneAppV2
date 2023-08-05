@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
   telefonNumaranKullan: {
     left: "15.59%",
     fontWeight: "600",
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
     color: Color.mediumvioletred_100,
     textAlign: "center",
     lineHeight: 24,

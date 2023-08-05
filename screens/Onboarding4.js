@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
   },
   kaytOl: {
     fontWeight: "600",
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
   },
   hesabnzYokMuContainer: {
     top: 720,

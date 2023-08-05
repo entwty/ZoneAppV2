@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     left: 0,
     fontSize: FontSize.size_base,
     fontWeight: "600",
-    fontFamily: FontFamily.poppinsSemibold,
+    fontFamily: FontFamily.poppinsSemiBold,
   },
   groupParent: {
     height: "13.3%",
